@@ -12,3 +12,8 @@ I believe that providing a score chart of participants will result in increase c
 * [Secondary metric] Increase in average score of the class
 ### Solution
 Show list of participants with the most important information that will validate the hypothesis (name, score, rank).
+### Technical Solution
+Technology: `iOS`
+Language: `Swift`
+Testing Frameworks: `XCode Test Navigator`
+Backend: `mockable.io`
