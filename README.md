@@ -12,6 +12,11 @@ I believe that providing a score chart of participants will result in increase c
 * [Secondary metric] Increase in average score of the class
 ### Solution
 Show list of participants with the most important information that will validate the hypothesis (name, score, rank).
+### Acceptance Criteria
+When application is opened, the download starts
+* [On success] Display list of participants with rank and score
+* [On error] Offer possibility to retry the download
+Local storage is out of scope for the MVP
 ### Technical Solution
 Technology: `iOS`
 Language: `Swift`
