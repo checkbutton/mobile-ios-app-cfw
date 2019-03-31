@@ -31,16 +31,18 @@ Backend: `mockable.io`
 * Codacy
 * mockable.io
 ### Technical Design & Whiteboarding
+#### API Endpoint
+![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/api/athletes.png?raw=true "API")
 #### Wireframes
 ##### List
-![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/wireframes/list.png?raw=true "Title")
+![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/wireframes/list.png?raw=true "Wireframe List")
 ##### Loading
-![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/wireframes/loading.png?raw=true "Title")
+![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/wireframes/loading.png?raw=true "Wireframe Loading")
 ##### Error
-![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/wireframes/error.png?raw=true "Title")
+![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/wireframes/error.png?raw=true "Wireframe Error")
 #### Architecture
-![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/architecture/mvvm.png?raw=true "Title")
-#### JSON Payload
-![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/api/athletes.png?raw=true "Title")
-#### ViewEntity
-![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/model/athlete.png?raw=true "Title")
+![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/architecture/mvvm.png?raw=true "Architecture")
+#### Model
+![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/model/athlete.png?raw=true "Model")
+#### View Entity
+![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/entity/athlete.png?raw=true "View Entity")
