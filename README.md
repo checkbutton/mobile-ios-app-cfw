@@ -16,9 +16,17 @@ Show list of participants with the most important information that will validate
 When application is opened, the download starts
 * [On success] Display list of participants with rank and score
 * [On error] Offer possibility to retry the download
+
 Local storage is out of scope for the MVP
 ### Technical Solution
 Technology: `iOS`
 Language: `Swift`
 Testing Frameworks: `XCode Test Navigator`
 Backend: `mockable.io`
+### Setup for the Challenge
+* GitHub repository and project
+* .gitignore
+* README
+* LICENSE
+* Codacy
+* mockable.io
