@@ -30,3 +30,17 @@ Backend: `mockable.io`
 * LICENSE
 * Codacy
 * mockable.io
+### Technical Design & Whiteboarding
+#### Wireframes
+##### List
+![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/wireframes/list.png?raw=true "Title")
+##### Loading
+![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/wireframes/loading.png?raw=true "Title")
+##### Error
+![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/wireframes/error.png?raw=true "Title")
+#### Architecture
+![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/architecture/mvvm.png?raw=true "Title")
+#### JSON Payload
+![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/api/athletes.png?raw=true "Title")
+#### ViewEntity
+![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/model/athlete.png?raw=true "Title")
