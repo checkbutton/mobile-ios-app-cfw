@@ -13,8 +13,10 @@
 		FB1F815F224E366000C4FAD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB1F815E224E366000C4FAD7 /* Assets.xcassets */; };
 		FB1F8162224E366000C4FAD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1F8160224E366000C4FAD7 /* LaunchScreen.storyboard */; };
 		FB1F8178224E366100C4FAD7 /* cfwUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F8177224E366100C4FAD7 /* cfwUITests.swift */; };
-		FB66143F2250ED5600F782A6 /* AthleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66143E2250ED5600F782A6 /* AthleteResponse.swift */; };
 		FB6614452250EFF000F782A6 /* AthleteResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6614442250EFF000F782A6 /* AthleteResponseTest.swift */; };
+		FB6614552250F66200F782A6 /* AthleteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6614542250F66200F782A6 /* AthleteEntity.swift */; };
+		FBB9F63F2250F6FA00FA2413 /* AthleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB9F63E2250F6FA00FA2413 /* AthleteResponse.swift */; };
+		FBB9F6452250F76C00FA2413 /* AthleteEntityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB9F6442250F76C00FA2413 /* AthleteEntityTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +49,10 @@
 		FB1F8173224E366100C4FAD7 /* cfwUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cfwUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB1F8177224E366100C4FAD7 /* cfwUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cfwUITests.swift; sourceTree = "<group>"; };
 		FB1F8179224E366100C4FAD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB66143E2250ED5600F782A6 /* AthleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AthleteResponse.swift; path = ../AthleteResponse.swift; sourceTree = "<group>"; };
 		FB6614442250EFF000F782A6 /* AthleteResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteResponseTest.swift; sourceTree = "<group>"; };
+		FB6614542250F66200F782A6 /* AthleteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteEntity.swift; sourceTree = "<group>"; };
+		FBB9F63E2250F6FA00FA2413 /* AthleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteResponse.swift; sourceTree = "<group>"; };
+		FBB9F6442250F76C00FA2413 /* AthleteEntityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteEntityTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		FB1F8156224E365D00C4FAD7 /* cfw */ = {
 			isa = PBXGroup;
 			children = (
+				FB6614522250F63C00F782A6 /* Ranking */,
 				FB66143B2250ECA600F782A6 /* Data */,
 				FB1F8157224E365D00C4FAD7 /* AppDelegate.swift */,
 				FB1F8159224E365D00C4FAD7 /* ViewController.swift */,
@@ -113,6 +118,7 @@
 		FB1F816B224E366100C4FAD7 /* cfwTests */ = {
 			isa = PBXGroup;
 			children = (
+				FBB9F6412250F75100FA2413 /* Ranking */,
 				FB6614482250F33300F782A6 /* Data */,
 				FB1F816E224E366100C4FAD7 /* Info.plist */,
 			);
@@ -147,7 +153,7 @@
 		FB6614432250EF0B00F782A6 /* Athlete */ = {
 			isa = PBXGroup;
 			children = (
-				FB66143E2250ED5600F782A6 /* AthleteResponse.swift */,
+				FBB9F63E2250F6FA00FA2413 /* AthleteResponse.swift */,
 			);
 			path = Athlete;
 			sourceTree = "<group>";
@@ -174,6 +180,54 @@
 				FB6614472250F32E00F782A6 /* Response */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		FB6614522250F63C00F782A6 /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				FB6614532250F64C00F782A6 /* Entity */,
+			);
+			path = Ranking;
+			sourceTree = "<group>";
+		};
+		FB6614532250F64C00F782A6 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FBB9F6402250F73E00FA2413 /* Athlete */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FBB9F6402250F73E00FA2413 /* Athlete */ = {
+			isa = PBXGroup;
+			children = (
+				FB6614542250F66200F782A6 /* AthleteEntity.swift */,
+			);
+			path = Athlete;
+			sourceTree = "<group>";
+		};
+		FBB9F6412250F75100FA2413 /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				FBB9F6422250F75500FA2413 /* Entity */,
+			);
+			path = Ranking;
+			sourceTree = "<group>";
+		};
+		FBB9F6422250F75500FA2413 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FBB9F6432250F75D00FA2413 /* Athlete */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FBB9F6432250F75D00FA2413 /* Athlete */ = {
+			isa = PBXGroup;
+			children = (
+				FBB9F6442250F76C00FA2413 /* AthleteEntityTest.swift */,
+			);
+			path = Athlete;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,7 +363,8 @@
 			files = (
 				FB1F815A224E365D00C4FAD7 /* ViewController.swift in Sources */,
 				FB1F8158224E365D00C4FAD7 /* AppDelegate.swift in Sources */,
-				FB66143F2250ED5600F782A6 /* AthleteResponse.swift in Sources */,
+				FBB9F63F2250F6FA00FA2413 /* AthleteResponse.swift in Sources */,
+				FB6614552250F66200F782A6 /* AthleteEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBB9F6452250F76C00FA2413 /* AthleteEntityTest.swift in Sources */,
 				FB6614452250EFF000F782A6 /* AthleteResponseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
