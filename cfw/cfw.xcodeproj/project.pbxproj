@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB1F8158224E365D00C4FAD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F8157224E365D00C4FAD7 /* AppDelegate.swift */; };
-		FB1F815A224E365D00C4FAD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F8159224E365D00C4FAD7 /* ViewController.swift */; };
+		FB1F815A224E365D00C4FAD7 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F8159224E365D00C4FAD7 /* RankingViewController.swift */; };
 		FB1F815D224E365D00C4FAD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1F815B224E365D00C4FAD7 /* Main.storyboard */; };
 		FB1F815F224E366000C4FAD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB1F815E224E366000C4FAD7 /* Assets.xcassets */; };
 		FB1F8162224E366000C4FAD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1F8160224E366000C4FAD7 /* LaunchScreen.storyboard */; };
@@ -16,6 +16,13 @@
 		FB36AA8F2251017200BC3CFB /* AthleteDownloadUseCase+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB36AA8E2251017200BC3CFB /* AthleteDownloadUseCase+Test.swift */; };
 		FB36AA9322510D7300BC3CFB /* JSONDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB36AA9222510D7300BC3CFB /* JSONDictionary.swift */; };
 		FB36AA9522510D8F00BC3CFB /* AthleteResponse+JSONDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB36AA9422510D8F00BC3CFB /* AthleteResponse+JSONDictionary.swift */; };
+		FB36AA9B225118CB00BC3CFB /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB36AA9A225118CB00BC3CFB /* RankingViewModel.swift */; };
+		FB36AA9E22511ACE00BC3CFB /* TableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB36AA9D22511ACE00BC3CFB /* TableProtocol.swift */; };
+		FB36AAA022511D7F00BC3CFB /* RankingViewModel+AthleteDownloadUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB36AA9F22511D7F00BC3CFB /* RankingViewModel+AthleteDownloadUseCase.swift */; };
+		FB36AAA322511EA600BC3CFB /* TableProtocol+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB36AAA222511EA600BC3CFB /* TableProtocol+Test.swift */; };
+		FB36AAA522511F9B00BC3CFB /* RankingViewController+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB36AAA422511F9B00BC3CFB /* RankingViewController+Test.swift */; };
+		FB36AAA92251209A00BC3CFB /* RankingViewModel+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB36AAA82251209A00BC3CFB /* RankingViewModel+Test.swift */; };
+		FB36AAAB2251223B00BC3CFB /* RankingViewModel+AthleteDownloadUseCase+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB36AAAA2251223A00BC3CFB /* RankingViewModel+AthleteDownloadUseCase+Test.swift */; };
 		FB6614452250EFF000F782A6 /* AthleteResponse+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6614442250EFF000F782A6 /* AthleteResponse+Test.swift */; };
 		FB6614552250F66200F782A6 /* AthleteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6614542250F66200F782A6 /* AthleteEntity.swift */; };
 		FBB9F63F2250F6FA00FA2413 /* AthleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB9F63E2250F6FA00FA2413 /* AthleteResponse.swift */; };
@@ -45,7 +52,7 @@
 /* Begin PBXFileReference section */
 		FB1F8154224E365D00C4FAD7 /* cfw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cfw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB1F8157224E365D00C4FAD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB1F8159224E365D00C4FAD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB1F8159224E365D00C4FAD7 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		FB1F815C224E365D00C4FAD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB1F815E224E366000C4FAD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB1F8161224E366000C4FAD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +65,13 @@
 		FB36AA8E2251017200BC3CFB /* AthleteDownloadUseCase+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AthleteDownloadUseCase+Test.swift"; sourceTree = "<group>"; };
 		FB36AA9222510D7300BC3CFB /* JSONDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDictionary.swift; sourceTree = "<group>"; };
 		FB36AA9422510D8F00BC3CFB /* AthleteResponse+JSONDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AthleteResponse+JSONDictionary.swift"; sourceTree = "<group>"; };
+		FB36AA9A225118CB00BC3CFB /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
+		FB36AA9D22511ACE00BC3CFB /* TableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableProtocol.swift; sourceTree = "<group>"; };
+		FB36AA9F22511D7F00BC3CFB /* RankingViewModel+AthleteDownloadUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RankingViewModel+AthleteDownloadUseCase.swift"; sourceTree = "<group>"; };
+		FB36AAA222511EA600BC3CFB /* TableProtocol+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableProtocol+Test.swift"; sourceTree = "<group>"; };
+		FB36AAA422511F9B00BC3CFB /* RankingViewController+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RankingViewController+Test.swift"; sourceTree = "<group>"; };
+		FB36AAA82251209A00BC3CFB /* RankingViewModel+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RankingViewModel+Test.swift"; sourceTree = "<group>"; };
+		FB36AAAA2251223A00BC3CFB /* RankingViewModel+AthleteDownloadUseCase+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RankingViewModel+AthleteDownloadUseCase+Test.swift"; sourceTree = "<group>"; };
 		FB6614442250EFF000F782A6 /* AthleteResponse+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AthleteResponse+Test.swift"; sourceTree = "<group>"; };
 		FB6614542250F66200F782A6 /* AthleteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteEntity.swift; sourceTree = "<group>"; };
 		FBB9F63E2250F6FA00FA2413 /* AthleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteResponse.swift; sourceTree = "<group>"; };
@@ -119,7 +133,6 @@
 				FB6614522250F63C00F782A6 /* Ranking */,
 				FB66143B2250ECA600F782A6 /* Data */,
 				FB1F8157224E365D00C4FAD7 /* AppDelegate.swift */,
-				FB1F8159224E365D00C4FAD7 /* ViewController.swift */,
 				FB1F815B224E365D00C4FAD7 /* Main.storyboard */,
 				FB1F815E224E366000C4FAD7 /* Assets.xcassets */,
 				FB1F8160224E366000C4FAD7 /* LaunchScreen.storyboard */,
@@ -153,6 +166,42 @@
 				FB36AA9222510D7300BC3CFB /* JSONDictionary.swift */,
 			);
 			path = Alias;
+			sourceTree = "<group>";
+		};
+		FB36AA99225118BC00BC3CFB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FB36AA9A225118CB00BC3CFB /* RankingViewModel.swift */,
+				FB36AA9F22511D7F00BC3CFB /* RankingViewModel+AthleteDownloadUseCase.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FB36AA9C22511ABA00BC3CFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB1F8159224E365D00C4FAD7 /* RankingViewController.swift */,
+				FB36AA9D22511ACE00BC3CFB /* TableProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB36AAA122511E9400BC3CFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB36AAA222511EA600BC3CFB /* TableProtocol+Test.swift */,
+				FB36AAA422511F9B00BC3CFB /* RankingViewController+Test.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB36AAA62251206D00BC3CFB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FB36AAA82251209A00BC3CFB /* RankingViewModel+Test.swift */,
+				FB36AAAA2251223A00BC3CFB /* RankingViewModel+AthleteDownloadUseCase+Test.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FB66143B2250ECA600F782A6 /* Data */ = {
@@ -209,6 +258,8 @@
 		FB6614522250F63C00F782A6 /* Ranking */ = {
 			isa = PBXGroup;
 			children = (
+				FB36AA9C22511ABA00BC3CFB /* View */,
+				FB36AA99225118BC00BC3CFB /* ViewModel */,
 				FB6614532250F64C00F782A6 /* Entity */,
 			);
 			path = Ranking;
@@ -234,6 +285,8 @@
 		FBB9F6412250F75100FA2413 /* Ranking */ = {
 			isa = PBXGroup;
 			children = (
+				FB36AAA62251206D00BC3CFB /* ViewModel */,
+				FB36AAA122511E9400BC3CFB /* View */,
 				FBB9F6422250F75500FA2413 /* Entity */,
 			);
 			path = Ranking;
@@ -420,12 +473,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB36AA9522510D8F00BC3CFB /* AthleteResponse+JSONDictionary.swift in Sources */,
-				FB1F815A224E365D00C4FAD7 /* ViewController.swift in Sources */,
+				FB1F815A224E365D00C4FAD7 /* RankingViewController.swift in Sources */,
 				FBB9F6552251007F00FA2413 /* AthleteDownloadUseCase.swift in Sources */,
 				FBB9F64B2250FB1700FA2413 /* AthleteEntity+AthleteResponse.swift in Sources */,
+				FB36AAA022511D7F00BC3CFB /* RankingViewModel+AthleteDownloadUseCase.swift in Sources */,
 				FB1F8158224E365D00C4FAD7 /* AppDelegate.swift in Sources */,
+				FB36AA9B225118CB00BC3CFB /* RankingViewModel.swift in Sources */,
 				FB36AA9322510D7300BC3CFB /* JSONDictionary.swift in Sources */,
 				FBB9F63F2250F6FA00FA2413 /* AthleteResponse.swift in Sources */,
+				FB36AA9E22511ACE00BC3CFB /* TableProtocol.swift in Sources */,
 				FB6614552250F66200F782A6 /* AthleteEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,8 +490,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB36AAA322511EA600BC3CFB /* TableProtocol+Test.swift in Sources */,
+				FB36AAAB2251223B00BC3CFB /* RankingViewModel+AthleteDownloadUseCase+Test.swift in Sources */,
 				FBB9F6452250F76C00FA2413 /* AthleteEntity+Test.swift in Sources */,
+				FB36AAA522511F9B00BC3CFB /* RankingViewController+Test.swift in Sources */,
 				FB36AA8F2251017200BC3CFB /* AthleteDownloadUseCase+Test.swift in Sources */,
+				FB36AAA92251209A00BC3CFB /* RankingViewModel+Test.swift in Sources */,
 				FBB9F64D2250FB4E00FA2413 /* AthleteEntity+AthleteResponse+Test.swift in Sources */,
 				FB6614452250EFF000F782A6 /* AthleteResponse+Test.swift in Sources */,
 			);

@@ -12,7 +12,6 @@ extension AthleteEntity {
     
     init(rank: Int,
         athleteResponse : AthleteResponse){
-        
         self.rank = rank
         self.name = athleteResponse.name
         self.score = athleteResponse.score
