@@ -20,8 +20,11 @@ When application is opened, the download starts
 Local storage is out of scope for the MVP
 ### Technical Solution
 Technology: `iOS`
+
 Language: `Swift`
+
 Testing Frameworks: `XCode Test Navigator`
+
 Backend: `mockable.io`
 ### Setup for the Challenge
 * GitHub repository and project
@@ -33,6 +36,38 @@ Backend: `mockable.io`
 ### Technical Design & Whiteboarding
 #### API Endpoint
 ![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/api/athletes.png?raw=true "API")
+
+```
+{
+ "athletes" : [
+    {
+        "id" : 51,
+        "name": "Johannes Neutze",
+        "score": 232,
+    },
+    {
+        "id" : 43,
+        "name": "Stefan Rothlehner",
+        "score": 201,
+    },
+    {
+        "id" : 1,
+        "name": "Henning Heinrich",
+        "score": 9,
+    },
+    {
+        "id" : 5,
+        "name": "Inga Tiedmers",
+        "score": 48,
+    },
+    {
+        "id" : 2,
+        "name": "Hannes Klein",
+        "score": 12,
+    }
+    ]
+}
+```
 #### Wireframes
 ##### List
 ![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/wireframes/list.png?raw=true "Wireframe List")

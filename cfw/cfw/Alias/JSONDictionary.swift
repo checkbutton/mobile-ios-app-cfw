@@ -1,5 +1,5 @@
 //
-//  AthleteEntity.swift
+//  JSONDictionary.swift
 //  cfw
 //
 //  Created by Johannes Neutze on 31.03.19.
@@ -8,8 +8,4 @@
 
 import Foundation
 
-struct AthleteEntity {
-    let rank : Int
-    let name :String
-    let score :Int
-}
+typealias JSONDictionary = [String:Any]
