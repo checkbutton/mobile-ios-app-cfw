@@ -12,7 +12,7 @@ class RankingViewModel {
     var athleteDownloadUseCase : AthleteDownloadUseCase!
     var tableProtocol : TableProtocol!
     
-    var athletes = [AthleteEntity]() {
+    var athletes : [AthleteEntity] = [AthleteEntity]() {
         didSet {
             reloadData()
         }

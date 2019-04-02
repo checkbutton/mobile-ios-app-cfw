@@ -26,18 +26,33 @@ class RankingViewController: UITableViewController, TableProtocol {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.athletes.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "AthleteItem"
+        
+        let rankTag = 1234
+        let nameTag = 1235
+        let scoreTag = 1236
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        
+        if let rankLabel = cell.viewWithTag(rankTag) as? UILabel {
+            rankLabel.text = viewModel.athletes[indexPath.row].rankToString()
+        }
+        if let nameLabel = cell.viewWithTag(nameTag) as? UILabel {
+            nameLabel.text = viewModel.athletes[indexPath.row].name
+        }
+        if let scoreLabel = cell.viewWithTag(scoreTag) as? UILabel {
+            scoreLabel.text = viewModel.athletes[indexPath.row].scoreToString()
+        }
         
         return cell
     }
     
     func reloadData() {
-        print("reload data")
+        self.tableView.reloadData()
     }
     
 }

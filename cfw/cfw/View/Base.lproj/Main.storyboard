@@ -25,36 +25,33 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMy-8c-Jif" userLabel="Rank">
-                                            <rect key="frame" x="20" y="11" width="28" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1234" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="28" translatesAutoresizingMaskIntoConstraints="NO" id="WMy-8c-Jif" userLabel="Rank">
+                                            <rect key="frame" x="11" y="11" width="56" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Johannes Neutze" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4W-Xq-KzU" userLabel="Name">
-                                            <rect key="frame" x="66" y="11" width="254" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1235" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Johannes Neutze" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4W-Xq-KzU" userLabel="Name">
+                                            <rect key="frame" x="78" y="11" width="258" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="232" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khi-EM-6sO" userLabel="Score">
-                                            <rect key="frame" x="338" y="11" width="56" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1236" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="232" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="56" translatesAutoresizingMaskIntoConstraints="NO" id="Khi-EM-6sO" userLabel="Score">
+                                            <rect key="frame" x="347" y="11" width="56" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Khi-EM-6sO" firstAttribute="leading" secondItem="Y4W-Xq-KzU" secondAttribute="trailing" constant="8" id="FcI-gp-jx9"/>
-                                        <constraint firstItem="WMy-8c-Jif" firstAttribute="top" secondItem="eUd-mQ-yCL" secondAttribute="top" constant="11" id="HW0-JK-BHC"/>
-                                        <constraint firstAttribute="trailing" secondItem="Khi-EM-6sO" secondAttribute="trailing" constant="20" symbolic="YES" id="ICC-SC-Rkp"/>
-                                        <constraint firstAttribute="bottom" secondItem="Khi-EM-6sO" secondAttribute="bottom" constant="11.5" id="UxK-vt-Dnt"/>
-                                        <constraint firstAttribute="bottom" secondItem="Y4W-Xq-KzU" secondAttribute="bottom" constant="11.5" id="Yae-Wc-VHS"/>
-                                        <constraint firstItem="Y4W-Xq-KzU" firstAttribute="leading" secondItem="WMy-8c-Jif" secondAttribute="trailing" constant="8" id="eVA-cG-xgu"/>
-                                        <constraint firstAttribute="bottom" secondItem="WMy-8c-Jif" secondAttribute="bottom" constant="11.5" id="etR-Mk-Gey"/>
-                                        <constraint firstItem="Khi-EM-6sO" firstAttribute="top" secondItem="eUd-mQ-yCL" secondAttribute="top" constant="11" id="flv-kX-9HL"/>
-                                        <constraint firstItem="Y4W-Xq-KzU" firstAttribute="top" secondItem="eUd-mQ-yCL" secondAttribute="top" constant="11" id="j5E-nU-yaA"/>
-                                        <constraint firstItem="WMy-8c-Jif" firstAttribute="leading" secondItem="eUd-mQ-yCL" secondAttribute="leading" constant="20" symbolic="YES" id="pyb-1q-mWK"/>
+                                        <constraint firstAttribute="trailing" secondItem="Khi-EM-6sO" secondAttribute="trailing" constant="11" id="EoP-DY-Ghz"/>
+                                        <constraint firstItem="WMy-8c-Jif" firstAttribute="leading" secondItem="eUd-mQ-yCL" secondAttribute="leading" constant="11" id="QgW-2m-Uaz"/>
+                                        <constraint firstAttribute="bottom" secondItem="WMy-8c-Jif" secondAttribute="bottom" constant="11.5" id="Za8-cQ-RAJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="Khi-EM-6sO" secondAttribute="bottom" constant="11.5" id="sfz-TV-kWa"/>
+                                        <constraint firstItem="Khi-EM-6sO" firstAttribute="top" secondItem="eUd-mQ-yCL" secondAttribute="top" constant="11" id="z3I-oo-Jad"/>
+                                        <constraint firstItem="WMy-8c-Jif" firstAttribute="top" secondItem="eUd-mQ-yCL" secondAttribute="top" constant="11" id="zgI-Ih-3fa"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -67,7 +64,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thu-t8-AKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="73.660714285714278"/>
+            <point key="canvasLocation" x="81" y="-283"/>
         </scene>
     </scenes>
 </document>
