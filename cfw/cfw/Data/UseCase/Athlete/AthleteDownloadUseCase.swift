@@ -62,10 +62,6 @@ class AthleteDownloadUseCase {
                     let sortedAthletes = athleteDictionaries.toSortedAthleteArray()
                     
                     athletes = sortedAthletes.toAthleteEntities()
-                    
-                    athletes.forEach { athlete in
-                        print(athlete)
-                    }
                 }
                 
                 DispatchQueue.main.async {

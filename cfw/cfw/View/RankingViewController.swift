@@ -10,18 +10,32 @@ import UIKit
 
 class RankingViewController: UITableViewController, TableProtocol {
     
-    var viewModel : RankingViewModel!
-    
+    private var viewModel : RankingViewModel!
+    var uiRefreshControl: UIRefreshControl!
+
     lazy var athleteDownloadUseCase = AthleteDownloadUseCase()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupRefreshControl()
         
         viewModel = RankingViewModel(
             athleteDownloadUseCase : athleteDownloadUseCase,
             tableProtocol : self
         )
-        
+
+        viewModel.loadAthletes()
+    }
+    
+    private func setupRefreshControl() {
+        uiRefreshControl = UIRefreshControl()
+        uiRefreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        uiRefreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        tableView.addSubview(uiRefreshControl)
+    }
+    
+    @objc func refresh(_ sender: Any) {
         viewModel.loadAthletes()
     }
     
@@ -53,7 +67,7 @@ class RankingViewController: UITableViewController, TableProtocol {
     
     func reloadData() {
         self.tableView.reloadData()
+        uiRefreshControl?.endRefreshing()
     }
-    
 }
 
