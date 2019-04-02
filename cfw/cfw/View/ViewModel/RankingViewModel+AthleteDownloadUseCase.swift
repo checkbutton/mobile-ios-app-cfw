@@ -11,8 +11,9 @@ import Foundation
 extension RankingViewModel {
     
     func loadAthletes() {
-        athleteDownloadUseCase.execute() { athletes in
+       athleteDownloadUseCase.execute() { (athletes, status) in
             self.athletes = athletes
+            self.status = status
         }
     }
     

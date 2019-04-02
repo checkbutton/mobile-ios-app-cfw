@@ -12,8 +12,14 @@ fileprivate extension Array where Element == JSONDictionary {
      func toSortedAthleteArray() -> [AthleteResponse] {
         var array = [AthleteResponse]()
         self.forEach { athlete in
-            array.append(AthleteResponse(jsonDictionary : athlete))
+            do {
+                try array.append(AthleteResponse(jsonDictionary : athlete))
+            }
+            catch {
+            
+            }
         }
+        
         array = array.sorted(by: { $0.score < $1.score })
         
         return array
@@ -43,8 +49,9 @@ class AthleteDownloadUseCase {
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
     
-    func execute(callback: @escaping ([AthleteEntity]) -> ()) {
+    func execute(callback: @escaping ([AthleteEntity], Status) -> ()) {
         var athletes = [AthleteEntity]()
+        var status : Status = .success
         
         dataTask?.cancel()
         
@@ -55,7 +62,9 @@ class AthleteDownloadUseCase {
             dataTask = defaultSession.dataTask(with: url) { data, response, error in
                 defer { self.dataTask = nil }
 
-                if let data = data {
+                if error != nil {
+                    status = .error
+                } else  if let data = data {
                     let json = try! JSONSerialization.jsonObject(with: data, options: [])
                     let dictionary = json as! JSONDictionary
                     let athleteDictionaries = dictionary[self.node] as! [JSONDictionary]
@@ -65,7 +74,7 @@ class AthleteDownloadUseCase {
                 }
                 
                 DispatchQueue.main.async {
-                    callback(athletes)
+                    callback(athletes, status)
                 }
             }
             

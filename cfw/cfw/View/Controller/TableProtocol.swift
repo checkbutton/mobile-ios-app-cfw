@@ -12,4 +12,6 @@ protocol TableProtocol {
     
     func reloadData()
     
+    func setStatus()
+    
 }

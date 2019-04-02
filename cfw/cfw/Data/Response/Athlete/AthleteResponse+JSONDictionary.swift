@@ -10,10 +10,19 @@ import Foundation
 
 extension AthleteResponse {
     
-    init(jsonDictionary : JSONDictionary){
-        self.id = jsonDictionary["id"] as! Int
-        self.name = jsonDictionary["name"] as! String
-        self.score = jsonDictionary["score"] as! Int
+    init(jsonDictionary : JSONDictionary) throws {
+        guard let id = jsonDictionary["id"] else {
+            throw ParsingError.missingField("id")
+        }
+        self.id = id as! Int
+        guard let name = jsonDictionary["name"] else {
+            throw ParsingError.missingField("name")
+        }
+        self.name = name as! String
+        guard let score  = jsonDictionary["score"] else {
+            throw ParsingError.missingField("score")
+        }
+        self.score = score as! Int
     }
     
 }

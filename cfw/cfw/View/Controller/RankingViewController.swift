@@ -17,20 +17,24 @@ class RankingViewController: UITableViewController, TableProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupRefreshControl()
-        
+        setupViewModel()
+    }
+    
+    //ViewModel
+    private func setupViewModel() {
         viewModel = RankingViewModel(
             athleteDownloadUseCase : athleteDownloadUseCase,
             tableProtocol : self
         )
-
+        
         viewModel.loadAthletes()
     }
     
+    //UIRefreshControl
     private func setupRefreshControl() {
         uiRefreshControl = UIRefreshControl()
-        uiRefreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        uiRefreshControl.attributedTitle = NSAttributedString(string: "Downloading Athletes")
         uiRefreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         tableView.addSubview(uiRefreshControl)
     }
@@ -39,6 +43,7 @@ class RankingViewController: UITableViewController, TableProtocol {
         viewModel.loadAthletes()
     }
     
+    //TableView
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.athletes.count
     }
@@ -65,9 +70,41 @@ class RankingViewController: UITableViewController, TableProtocol {
         return cell
     }
     
+    //TableProtocol
     func reloadData() {
         self.tableView.reloadData()
-        uiRefreshControl?.endRefreshing()
+    }
+    
+    func setStatus() {
+        switch viewModel.status {
+            case .error:
+                showErrorDialog()
+            case .success:
+                uiRefreshControl?.endRefreshing()
+        }
+    }
+    
+    //Dialog
+    func showErrorDialog() {
+        let alert = UIAlertController(
+            title: "Error",
+            message: "Please pull to refresh",
+            preferredStyle: .alert
+        )
+        
+        let action = UIAlertAction(
+            title: "Ok",
+            style: .default,
+            handler: nil
+        )
+        
+        alert.addAction(action)
+
+        present(
+            alert,
+            animated: true,
+            completion: nil
+        )
     }
 }
 

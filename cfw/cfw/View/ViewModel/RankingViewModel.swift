@@ -17,6 +17,11 @@ class RankingViewModel {
             reloadData()
         }
     }
+    var status : Status = .success {
+        didSet {
+            setStatus()
+        }
+    }
     
     init(athleteDownloadUseCase : AthleteDownloadUseCase,
          tableProtocol : TableProtocol) {
@@ -26,5 +31,9 @@ class RankingViewModel {
     
     func reloadData() {
         tableProtocol.reloadData()
+    }
+    
+    func setStatus() {
+        tableProtocol.setStatus()
     }
 }
