@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RankingViewController: UIViewController, TableProtocol {
+class RankingViewController: UITableViewController, TableProtocol {
     
     var viewModel : RankingViewModel!
     
