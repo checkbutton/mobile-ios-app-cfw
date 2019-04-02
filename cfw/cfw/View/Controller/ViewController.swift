@@ -8,13 +8,14 @@
 
 import UIKit
 
-class RankingViewController: UITableViewController, TableProtocol {
+class ViewController: UITableViewController, TableProtocol {
     
+    //var
+    private var athleteDownloadUseCase = AthleteDownloadUseCase()
+    private var uiRefreshControl: UIRefreshControl!
     private var viewModel : RankingViewModel!
-    var uiRefreshControl: UIRefreshControl!
 
-    lazy var athleteDownloadUseCase = AthleteDownloadUseCase()
-
+    //Controller
     override func viewDidLoad() {
         super.viewDidLoad()
         setupRefreshControl()

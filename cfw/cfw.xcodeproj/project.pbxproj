@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB1F8158224E365D00C4FAD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F8157224E365D00C4FAD7 /* AppDelegate.swift */; };
-		FB1F815A224E365D00C4FAD7 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F8159224E365D00C4FAD7 /* RankingViewController.swift */; };
+		FB1F815A224E365D00C4FAD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F8159224E365D00C4FAD7 /* ViewController.swift */; };
 		FB1F815D224E365D00C4FAD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1F815B224E365D00C4FAD7 /* Main.storyboard */; };
 		FB1F815F224E366000C4FAD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB1F815E224E366000C4FAD7 /* Assets.xcassets */; };
 		FB1F8162224E366000C4FAD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1F8160224E366000C4FAD7 /* LaunchScreen.storyboard */; };
@@ -54,7 +54,7 @@
 /* Begin PBXFileReference section */
 		FB1F8154224E365D00C4FAD7 /* cfw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cfw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB1F8157224E365D00C4FAD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB1F8159224E365D00C4FAD7 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
+		FB1F8159224E365D00C4FAD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FB1F815C224E365D00C4FAD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB1F815E224E366000C4FAD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB1F8161224E366000C4FAD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 		FB36AAB32253BBE900BC3CFB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FB1F8159224E365D00C4FAD7 /* RankingViewController.swift */,
+				FB1F8159224E365D00C4FAD7 /* ViewController.swift */,
 				FB36AA9D22511ACE00BC3CFB /* TableProtocol.swift */,
 			);
 			path = Controller;
@@ -477,7 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB36AA9522510D8F00BC3CFB /* AthleteResponse+JSONDictionary.swift in Sources */,
-				FB1F815A224E365D00C4FAD7 /* RankingViewController.swift in Sources */,
+				FB1F815A224E365D00C4FAD7 /* ViewController.swift in Sources */,
 				FBB9F6552251007F00FA2413 /* AthleteDownloadUseCase.swift in Sources */,
 				FB36AAB52253C69900BC3CFB /* ParsingError.swift in Sources */,
 				FB36AAAD2253926900BC3CFB /* AthleteEntity+String.swift in Sources */,

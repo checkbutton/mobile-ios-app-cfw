@@ -11,10 +11,10 @@ import XCTest
 
 class RankingViewControllerTest: XCTestCase {
     
-    var rankingViewController : RankingViewController!
+    var rankingViewController : ViewController!
     
     override func setUp() {
-        rankingViewController = RankingViewController()
+        rankingViewController = ViewController()
     }
     
     override func tearDown() {
