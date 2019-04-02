@@ -12,7 +12,9 @@ extension RankingViewModel {
     
     func loadAthletes() {
        athleteDownloadUseCase.execute() { (athletes, status) in
+        if status == .success {
             self.athletes = athletes
+        }
             self.status = status
         }
     }

@@ -79,9 +79,10 @@ class RankingViewController: UITableViewController, TableProtocol {
         switch viewModel.status {
             case .error:
                 showErrorDialog()
-            case .success:
-                uiRefreshControl?.endRefreshing()
+        case .success:
+            break
         }
+        uiRefreshControl?.endRefreshing()
     }
     
     //Dialog
