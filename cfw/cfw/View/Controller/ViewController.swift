@@ -14,7 +14,7 @@ class ViewController: UITableViewController, TableProtocol {
     private var athleteDownloadUseCase = AthleteDownloadUseCase()
     private var uiRefreshControl: UIRefreshControl!
     private var viewModel : ViewModel!
-
+    
     //Controller
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,8 +78,8 @@ class ViewController: UITableViewController, TableProtocol {
     
     func setStatus() {
         switch viewModel.status {
-            case .error:
-                showErrorDialog()
+        case .error:
+            showErrorDialog()
         case .success:
             break
         }
@@ -101,7 +101,7 @@ class ViewController: UITableViewController, TableProtocol {
         )
         
         alert.addAction(action)
-
+        
         present(
             alert,
             animated: true,

@@ -13,7 +13,7 @@ class ViewModel {
     //var
     private var tableProtocol : TableProtocol!
     internal var athleteDownloadUseCase : AthleteDownloadUseCase!
-
+    
     var athletes : [AthleteEntity] = [AthleteEntity]() {
         didSet {
             tableProtocol.reloadData()

@@ -11,10 +11,11 @@ import Foundation
 extension ViewModel {
     
     func loadAthletes() {
-       athleteDownloadUseCase.execute() { (athletes, status) in
-        if status == .success {
-            self.athletes = athletes
-        }
+        athleteDownloadUseCase.execute() { (athletes, status) in
+            // keep data in case of .error
+            if status == .success {
+                self.athletes = athletes
+            }
             self.status = status
         }
     }

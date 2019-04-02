@@ -9,14 +9,14 @@
 import Foundation
 
 fileprivate extension Array where Element == JSONDictionary {
-     func toSortedAthleteArray() -> [AthleteResponse] {
+    func toSortedAthleteArray() -> [AthleteResponse] {
         var array = [AthleteResponse]()
         self.forEach { athlete in
             do {
                 try array.append(AthleteResponse(jsonDictionary : athlete))
             }
             catch {
-            
+                
             }
         }
         
@@ -45,7 +45,7 @@ fileprivate extension Array where Element == AthleteResponse {
 class AthleteDownloadUseCase {
     let endpoint = "https://demo0095153.mockable.io/athletes"
     let node = "athletes"
-
+    
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
     
@@ -56,18 +56,18 @@ class AthleteDownloadUseCase {
         dataTask?.cancel()
         
         if var urlComponents = URLComponents(string: endpoint) {
-
+            
             guard let url = urlComponents.url else { return }
-
+            
             dataTask = defaultSession.dataTask(with: url) { data, response, error in
                 defer { self.dataTask = nil }
-
+                
                 if error != nil {
                     status = .error
-                } else  if let data = data {
+                } else if let data = data {
                     let json = try! JSONSerialization.jsonObject(with: data, options: [])
-                    let dictionary = json as! JSONDictionary
-                    let athleteDictionaries = dictionary[self.node] as! [JSONDictionary]
+                    let jsonDictionary = json as! JSONDictionary
+                    let athleteDictionaries = jsonDictionary[self.node] as! [JSONDictionary]
                     let sortedAthletes = athleteDictionaries.toSortedAthleteArray()
                     
                     athletes = sortedAthletes.toAthleteEntities()
