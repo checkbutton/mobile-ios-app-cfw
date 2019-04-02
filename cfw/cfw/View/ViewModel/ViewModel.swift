@@ -8,32 +8,27 @@
 
 import Foundation
 
-class RankingViewModel {
-    var athleteDownloadUseCase : AthleteDownloadUseCase!
-    var tableProtocol : TableProtocol!
+class ViewModel {
     
+    //var
+    private var tableProtocol : TableProtocol!
+    internal var athleteDownloadUseCase : AthleteDownloadUseCase!
+
     var athletes : [AthleteEntity] = [AthleteEntity]() {
         didSet {
-            reloadData()
+            tableProtocol.reloadData()
         }
     }
     var status : Status = .success {
         didSet {
-            setStatus()
+            tableProtocol.setStatus()
         }
     }
     
+    //ViewModel
     init(athleteDownloadUseCase : AthleteDownloadUseCase,
          tableProtocol : TableProtocol) {
         self.athleteDownloadUseCase = athleteDownloadUseCase
         self.tableProtocol = tableProtocol
-    }
-    
-    func reloadData() {
-        tableProtocol.reloadData()
-    }
-    
-    func setStatus() {
-        tableProtocol.setStatus()
     }
 }

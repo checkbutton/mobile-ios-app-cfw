@@ -11,13 +11,13 @@ import XCTest
 
 class RankingViewModelTest: XCTestCase {
     
-    var rankingViewModel : RankingViewModel!
+    var rankingViewModel : ViewModel!
     
     override func setUp() {
         let athleteDownloadUseCase = AthleteDownloadUseCase()
         let tableProtocol = RankingViewModelTestClass()
 
-        rankingViewModel = RankingViewModel(
+        rankingViewModel = ViewModel(
             athleteDownloadUseCase : athleteDownloadUseCase,
             tableProtocol : tableProtocol
         )

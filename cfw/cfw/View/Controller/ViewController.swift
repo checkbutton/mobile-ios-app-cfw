@@ -13,7 +13,7 @@ class ViewController: UITableViewController, TableProtocol {
     //var
     private var athleteDownloadUseCase = AthleteDownloadUseCase()
     private var uiRefreshControl: UIRefreshControl!
-    private var viewModel : RankingViewModel!
+    private var viewModel : ViewModel!
 
     //Controller
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class ViewController: UITableViewController, TableProtocol {
     
     //ViewModel
     private func setupViewModel() {
-        viewModel = RankingViewModel(
+        viewModel = ViewModel(
             athleteDownloadUseCase : athleteDownloadUseCase,
             tableProtocol : self
         )

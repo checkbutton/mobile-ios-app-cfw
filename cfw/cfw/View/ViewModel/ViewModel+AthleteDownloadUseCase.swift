@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension RankingViewModel {
+extension ViewModel {
     
     func loadAthletes() {
        athleteDownloadUseCase.execute() { (athletes, status) in
