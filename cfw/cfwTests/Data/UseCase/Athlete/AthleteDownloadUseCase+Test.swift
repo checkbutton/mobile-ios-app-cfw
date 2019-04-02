@@ -26,10 +26,11 @@ class AthleteDownloadUseCaseTest: XCTestCase {
         
     }
     
+    //TODO: real success and error scenarios
     func test_execute() {
-        
-        athleteDownloadUseCase.execute() { athlete in
+        athleteDownloadUseCase.execute() { (athlete, status) in
             print(athlete)
+            print(status)
         }
     }
     

@@ -1,5 +1,5 @@
 //
-//  RankingViewModel+Test.swift
+//  RankingViewModel+AthleteDownloadUseCase+Test.swift
 //  cfwTests
 //
 //  Created by Johannes Neutze on 31.03.19.
@@ -9,14 +9,14 @@
 import XCTest
 @testable import cfw
 
-class RankingViewModelTest: XCTestCase {
+class ViewModelAthleteDownloadUseCaseTest: XCTestCase {
     
     var rankingViewModel : ViewModel!
     
     override func setUp() {
         let athleteDownloadUseCase = AthleteDownloadUseCase()
-        let tableProtocol = RankingViewModelTestClass()
-
+        let tableProtocol = RankingViewModelAthleteDownloadUseCaseTestClass()
+        
         rankingViewModel = ViewModel(
             athleteDownloadUseCase : athleteDownloadUseCase,
             tableProtocol : tableProtocol
@@ -26,23 +26,20 @@ class RankingViewModelTest: XCTestCase {
     override func tearDown() {
     }
     
-    func test_reloadData() {
-        rankingViewModel.reloadData()
-    }
-    
-    func test_athletes() {
-        let expected = [AthleteEntity]()
-        rankingViewModel.athletes = expected
-        let actual = rankingViewModel.athletes
-        
-        XCTAssert(expected.count == actual.count)
+    func test_loadAthletes() {
+        rankingViewModel.loadAthletes()
     }
 }
 
-fileprivate class RankingViewModelTestClass : TableProtocol {
+fileprivate class RankingViewModelAthleteDownloadUseCaseTestClass : TableProtocol {
     
     func reloadData() {
         XCTAssert(true)
     }
     
+    func setStatus() {
+        XCTAssert(true)
+    }
+    
 }
+

@@ -78,16 +78,16 @@ class ViewController: UITableViewController, TableProtocol {
     
     func setStatus() {
         switch viewModel.status {
-        case .error:
-            showErrorDialog()
-        case .success:
-            break
+            case .error:
+                showErrorDialog()
+            case .success:
+                break
         }
         uiRefreshControl?.endRefreshing()
     }
     
     //Dialog
-    func showErrorDialog() {
+    private func showErrorDialog() {
         let alert = UIAlertController(
             title: "Error",
             message: "Please pull to refresh",

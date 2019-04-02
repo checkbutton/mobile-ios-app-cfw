@@ -9,6 +9,7 @@
 import XCTest
 @testable import cfw
 
+//requires instrumented and mocked tests
 class RankingViewControllerTest: XCTestCase {
     
     var rankingViewController : ViewController!
@@ -18,14 +19,6 @@ class RankingViewControllerTest: XCTestCase {
     }
     
     override func tearDown() {
-    }
-    
-    func test_viewDidLoad() {
-        rankingViewController.viewDidLoad()
-    }
-    
-    func test_reloadData() {
-        rankingViewController.reloadData()
     }
     
 }

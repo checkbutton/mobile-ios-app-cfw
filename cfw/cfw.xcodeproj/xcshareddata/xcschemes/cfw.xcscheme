@@ -38,16 +38,6 @@
                ReferencedContainer = "container:cfw.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FB1F8172224E366100C4FAD7"
-               BuildableName = "cfwUITests.xctest"
-               BlueprintName = "cfwUITests"
-               ReferencedContainer = "container:cfw.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
