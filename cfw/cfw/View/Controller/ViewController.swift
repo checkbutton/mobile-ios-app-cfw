@@ -76,14 +76,24 @@ class ViewController: UITableViewController, TableProtocol {
         self.tableView.reloadData()
     }
     
-    func setStatus() {
-        switch viewModel.status {
+    func reloadStatus() {
+        uiRefreshControl.endRefreshing()
+        
+        //workaround to prevent overwriting uiRefreshControl.endRefreshing by errorDialog
+        let queue = DispatchQueue.main
+        queue.asyncAfter(deadline: .now() + 1.0) {
+            switch self.viewModel.status {
             case .error:
-                showErrorDialog()
+                self.showErrorDialog()
+                break
             case .success:
                 break
+            }
         }
-        uiRefreshControl?.endRefreshing()
+    }
+    
+    func resetStatus(alert: UIAlertAction!) {
+        self.viewModel.status = .success
     }
     
     //Dialog
@@ -97,7 +107,7 @@ class ViewController: UITableViewController, TableProtocol {
         let action = UIAlertAction(
             title: "Ok",
             style: .default,
-            handler: nil
+            handler: resetStatus
         )
         
         alert.addAction(action)

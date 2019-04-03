@@ -87,6 +87,8 @@ Backend: `mockable.io`
 Since the provided mockable.io URL was only `http` and not `https`, iOS was blocking the connection to the endpoint. In order to fix this problem, I googled the error and found several solutions on stackoverflow. They all suggested to edit `NSAppTransportSecurity` in the `info.plist`. Even though there were a lot of similar solutions, none of the them worked in this case. In the end I fixed it by just changing the `http` URL to `https` and it worked without problems.
 #### Working without Dependency Injection and Mock
 In real projects, dependency injection and mock are fundamentals parts of development. Setting it up for a challenge requires initial effort that is covered by the advantages. Thus in a real project, this should be the first thing to be set up.
+#### Race condition between pull to refresh and dialog
+When receiving the result from downloading data and it is an error, a dialog is shown. This blocks the animation of pull to refresh to complete and thus stays in the loading state. In order to prevent this from happening, a delay for the dialog is added so the animation can finish first.
 ### Time invested
 `~16 hours over three days`
 ## Next steps

@@ -21,7 +21,7 @@ class ViewModel {
     }
     var status : Status = .success {
         didSet {
-            tableProtocol.setStatus()
+            tableProtocol.reloadStatus()
         }
     }
     

@@ -25,7 +25,7 @@ class TableProtocolTest: XCTestCase {
     }
     
     func test_setStatus() {
-        tableProtocol.setStatus()
+        tableProtocol.reloadStatus()
     }
 }
 
@@ -35,7 +35,7 @@ fileprivate class TableProtocolTestClass : TableProtocol {
         XCTAssert(true)
     }
     
-    func setStatus() {
+    func reloadStatus() {
         XCTAssert(true)
     }
     

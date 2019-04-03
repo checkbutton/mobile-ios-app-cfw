@@ -37,7 +37,7 @@ fileprivate class RankingViewModelAthleteDownloadUseCaseTestClass : TableProtoco
         XCTAssert(true)
     }
     
-    func setStatus() {
+    func reloadStatus() {
         XCTAssert(true)
     }
     

@@ -45,7 +45,7 @@ fileprivate class RankingViewModelTestClass : TableProtocol {
         XCTAssert(true)
     }
     
-    func setStatus() {
+    func reloadStatus() {
         XCTAssert(true)
     }
     
