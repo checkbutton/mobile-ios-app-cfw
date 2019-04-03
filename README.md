@@ -89,3 +89,24 @@ Backend: `mockable.io`
 Since the provided mockable.io URL was only `http` and not `https`, iOS was blocking the connection to the endpoint. In order to fix this problem, I googled the error and found several solutions on stackoverflow. They all suggested to edit `NSAppTransportSecurity` in the `info.plist`. Even though there were a lot of similar solutions, none of the them worked in this case. In the end I fixed it by just changing the `http` URL to `https` and it worked without problems.
 #### Working without Dependency Injection and Mock
 In real projects, dependency injection and mock are fundamentals parts of development. Setting it up for a challenge requires initial effort that is covered by the advantages. Thus in a real project, this should be the first thing to be set up.
+## Next steps
+The next steps of development would be
+### Development
+* More tests using mock as well as instrumented tests
+* Dependency Injection
+* RxSwift
+* Dependency Management using CocoaPods or Carthage
+* Codacy and/or linting for code quality
+* CI system for testing and deployment
+### Monitoring
+* Firebase Crashlytics for stability tracking
+* Firebase Performance for UI and network performance observation
+* Firebase RemoteConfig for A/B testing
+### UX
+* Information architecture
+* Response to user actions (Loading indicators, different states, error handling, UI refactoring)
+* Layout adjustments to serve different device types
+### Features
+* AppIcon and nicer setup
+* Athlete Images, workout details and result submission
+* Local persistance
