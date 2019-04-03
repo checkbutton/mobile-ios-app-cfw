@@ -2,7 +2,7 @@
 ## Installation
 * Clone this repo `https://github.com/neutze/mobile-ios-app-cfw.git`
 * Navigate to the folder and subfolder `cfw`
-* Open `cfw.xcworkspace` and run the project on a device or simulator
+* Open `cfw.xcworkspace` and run the project on a device or simulator (optimized for iPhone XR)
 ## Documentation
 ### Problem Statement
 Currently, there is no visibility for ranking and scores of participants from CrossFit Werk. In order to encourage motivation / competition, it is important to surface the Open's score to all participants.
