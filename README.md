@@ -74,8 +74,6 @@ Backend: `mockable.io`
 #### Wireframes
 ##### List
 ![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/wireframes/list.png?raw=true "Wireframe List")
-##### Loading
-![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/wireframes/loading.png?raw=true "Wireframe Loading")
 ##### Error
 ![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/wireframes/error.png?raw=true "Wireframe Error")
 #### Architecture
