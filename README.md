@@ -84,3 +84,8 @@ Backend: `mockable.io`
 ![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/model/athlete.png?raw=true "Model")
 #### View Entity
 ![Alt text](https://github.com/neutze/mobile-ios-app-cfw/blob/master/.whiteboard/entity/athlete.png?raw=true "View Entity")
+### Challenges faced during Project
+#### iOS blocking `http` URLs
+Since the provided mockable.io URL was only `http` and not `https`, iOS was blocking the connection to the endpoint. In order to fix this problem, I googled the error and found several solutions on stackoverflow. They all suggested to edit `NSAppTransportSecurity` in the `info.plist`. Even though there were a lot of similar solutions, none of the them worked in this case. In the end I fixed it by just changing the `http` URL to `https` and it worked without problems.
+#### Working without Dependency Injection and Mock
+In real projects, dependency injection and mock are fundamentals parts of development. Setting it up for a challenge requires initial effort that is covered by the advantages. Thus in a real project, this should be the first thing to be set up.
